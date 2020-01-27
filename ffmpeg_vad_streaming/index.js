@@ -112,7 +112,7 @@ function intermediateDecode() {
 
 function feedAudioContent(chunk) {
 	audioLength += (chunk.length / 2) * ( 1 / AUDIO_SAMPLE_RATE);
-	model.feedAudioContent(sctx, chunk.slice(0, chunk.length / 2));
+	model.feedAudioContent(sctx, chunk);
 }
 
 function processVad(data) {
